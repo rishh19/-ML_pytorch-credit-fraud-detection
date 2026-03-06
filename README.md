@@ -190,6 +190,22 @@ This API can be integrated with:
 
 ---
 
+## ▶ Running the API
+
+Install dependencies:
+
+pip install -r requirements.txt
+
+Run the FastAPI server:
+
+uvicorn api.app:app --reload
+
+Open API documentation:
+
+http://127.0.0.1:8000/docs
+
+
+
 ## 🛠 Technologies Used
 
 | Technology   | Purpose                      |
