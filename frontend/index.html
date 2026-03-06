@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>AI Fraud Detection Dashboard</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+<div class="min-h-screen flex">
+
+<!-- Sidebar -->
+
+<div class="w-64 bg-gray-900 text-white p-6">
+
+<h2 class="text-2xl font-bold mb-8">Fraud AI</h2>
+
+<ul class="space-y-4">
+
+<li class="hover:text-blue-400 cursor-pointer">Dashboard</li>
+<li class="hover:text-blue-400 cursor-pointer">Prediction</li>
+<li class="hover:text-blue-400 cursor-pointer">Analytics</li>
+
+</ul>
+
+</div>
+
+<!-- Main Content -->
+
+<div class="flex-1 p-10">
+
+<h1 class="text-3xl font-bold mb-6">
+Credit Card Fraud Detection
+</h1>
+
+<div class="grid grid-cols-3 gap-6 mb-10">
+
+<div class="bg-white p-6 rounded-xl shadow">
+<h3 class="text-gray-500">Transactions</h3>
+<p class="text-2xl font-bold">284,807</p>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<h3 class="text-gray-500">Frauds</h3>
+<p class="text-2xl font-bold text-red-500">492</p>
+</div>
+
+<div class="bg-white p-6 rounded-xl shadow">
+<h3 class="text-gray-500">Accuracy</h3>
+<p class="text-2xl font-bold text-green-500">95%</p>
+</div>
+
+</div>
+
+<!-- Prediction Panel -->
+
+<div class="bg-white p-8 rounded-xl shadow mb-10">
+
+<h2 class="text-xl font-bold mb-4">Transaction Prediction</h2>
+
+<input id="amount"
+class="border p-3 w-full mb-4 rounded"
+placeholder="Transaction Amount">
+
+<button
+onclick="predict()"
+class="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">
+
+Run Prediction
+
+</button>
+
+<p id="result" class="mt-4 text-xl font-bold"></p>
+
+</div>
+
+<!-- Chart -->
+
+<div class="bg-white p-8 rounded-xl shadow">
+
+<h2 class="text-xl font-bold mb-4">
+Fraud Distribution
+</h2>
+
+<canvas id="fraudChart"></canvas>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
