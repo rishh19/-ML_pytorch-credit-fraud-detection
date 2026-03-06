@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
 ![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red?logo=pytorch)
-![FastAPI](https://img.shields.io/badge/FastAPI-API-green?logo=fastapi)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Status](https://img.shields.io/badge/Project-Completed-brightgreen)
 
@@ -164,46 +164,29 @@ torch.save(model.state_dict(), "fraud_detection_model.pth")
 
 ---
 
-## 🚀 API Deployment using FastAPI
+## 🚀 Web App Deployment using Streamlit
 
-A **REST API** was created using FastAPI to make the model usable in real-world systems.
+An interactive web application was built using **Streamlit** to allow users to test the fraud detection model in real time.
 
-### Example API Request
+Users can enter transaction feature values and instantly receive a prediction indicating whether the transaction is **fraudulent or legitimate**.
 
-```
-POST /predict
-```
-
-### Example Response
-
-```
-{
-  "prediction": "Fraudulent Transaction"
-}
-```
-
-This API can be integrated with:
-
-* Banking applications
-* Payment gateways
-* Fraud monitoring systems
+The dashboard also displays a **fraud risk score** to visualize the model's prediction confidence.
 
 ---
 
-## ▶ Running the API
+## ▶ Running the Streamlit App
 
 Install dependencies:
 
 pip install -r requirements.txt
 
-Run the FastAPI server:
+Run the Streamlit dashboard:
 
-uvicorn api.app:app --reload
+streamlit run app.py
 
-Open API documentation:
+The application will open automatically in your browser:
 
-http://127.0.0.1:8000/docs
-
+http://localhost:8501
 
 
 ## 🛠 Technologies Used
@@ -214,7 +197,7 @@ http://127.0.0.1:8000/docs
 | PyTorch      | Deep learning framework      |
 | Pandas       | Data processing              |
 | Scikit-learn | Preprocessing and evaluation |
-| FastAPI      | API deployment               |
+| Streamlit    | Interactive web dashboard    |
 | Matplotlib   | Data visualization           |
 | Seaborn      | Statistical visualization    |
 
@@ -228,13 +211,17 @@ ML_pytorch-credit-fraud-detection
 ├── notebooks
 │   └── training.ipynb
 │
-├── api
-│   └── app.py
+├── app.py
 │
 ├── fraud_detection_model.pth
 ├── requirements.txt
 └── README.md
 ```
+## 🌐 Live Demo
+
+Try the application here:
+
+https://your-streamlit-app-link.streamlit.app](https://ml-pytorch-credit-fraud-detection.streamlit.app/
 
 ---
 
