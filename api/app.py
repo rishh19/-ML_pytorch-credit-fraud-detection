@@ -1,10 +1,17 @@
+from fastapi.middleware.cors import CORSMiddleware
 import torch
 import torch.nn as nn
 from fastapi import FastAPI
 import numpy as np
 
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 class FraudDetectionModel(nn.Module):
 
     def __init__(self):
