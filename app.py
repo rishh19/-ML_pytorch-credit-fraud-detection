@@ -1,9 +1,8 @@
 import streamlit as st
 import torch
 import torch.nn as nn
-import numpy as np
 
-# Model architecture (same as training)
+# SAME architecture used during training
 class FraudDetector(nn.Module):
     def __init__(self):
         super(FraudDetector, self).__init__()
@@ -21,10 +20,11 @@ class FraudDetector(nn.Module):
         return self.network(x)
 
 
-# Load model
+# Load trained model
 model = FraudDetector()
-model.load_state_dict(torch.load("fraud_detection_model.pth"))
+model.load_state_dict(torch.load("fraud_detection_model.pth", map_location="cpu"))
 model.eval()
+
 
 st.title("💳 Credit Card Fraud Detection")
 
