@@ -221,7 +221,7 @@ ML_pytorch-credit-fraud-detection
 
 Try the application here:
 
-https://your-streamlit-app-link.streamlit.app](https://ml-pytorch-credit-fraud-detection.streamlit.app/
+https://ml-pytorch-credit-fraud-detection.streamlit.app/
 
 ---
 
