@@ -1,8 +1,7 @@
-torch
-pandas
-numpy
-scikit-learn
 matplotlib
 seaborn
-fastapi
-uvicorn
+streamlit
+torch
+numpy
+pandas
+scikit-learn
